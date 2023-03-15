@@ -13,7 +13,7 @@ public class Main {
          * Выбрать мужчин-военнообязанных (от 18 до 27 лет)
          */
         List<People> people2 = pl.stream()
-                .filter(p -> p.getAge() > 18 && p.getAge() < 27 && p.getSex() == "MAN")
+                .filter(p -> p.getAge() > 18 && p.getAge() < 27 && p.getSex() == Sex.MAN)
                 .collect(Collectors.toList());
         people2.forEach(System.out::println);
 
@@ -21,7 +21,7 @@ public class Main {
          * Найти средний возраст среди мужчин
          */
         double people3 = pl.stream()
-                .filter(people -> people.getSex() == "MAN")
+                .filter(people -> people.getSex() == Sex.MAN)
                 .mapToInt(People::getAge)
                 .average()
                 .getAsDouble();

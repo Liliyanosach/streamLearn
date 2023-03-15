@@ -3,9 +3,9 @@ package test2;
 public class People {
     private String name;
     private int age;
-    private String sex;
+    private Sex sex;
 
-    public People(String name, int age, String sex) {
+    public People(String name, int age, Sex sex) {
         this.name = name;
         this.age = age;
         this.sex = sex;
@@ -27,11 +27,11 @@ public class People {
         this.age = age;
     }
 
-    public String getSex() {
+    public Sex getSex() {
         return sex;
     }
 
-    public void setSex(String sex) {
+    public void setSex(Sex sex) {
         this.sex = sex;
     }
 
@@ -40,7 +40,7 @@ public class People {
         return "People{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
-                ", sex='" + sex + '\'' +
+                ", sex=" + sex +
                 '}';
     }
 }
